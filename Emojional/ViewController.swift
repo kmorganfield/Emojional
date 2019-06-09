@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let emojis = ["🐏": "Aries", "🐮": "Taurus", "👯": "Gemini", "🦀": "Cancer", "🦁": "Leo", "👰🏻": "Virgo", "⚖️": "Libra", "🦂": "Scorpio", "🏹": "Sagittarius", "🐐": "Capricorn", "🌊": "Aquarius", "🎏": "Pisces"]
+    let emojis = ["🐏": "Aries", "🐮": "Taurus", "👯": "Gemini", "🦀": "Cancer", "🦁": "Leo", "🌬": "Virgo", "⚖️": "Libra", "🦂": "Scorpio", "🏹": "Sagittarius", "🐐": "Capricorn", "🌊": "Aquarius", "🎏": "Pisces"]
     
     var horoscopes = [
     "Aries": ["You don't have to treat difficult feelings like hot coals in your hand that must be thrown off for fear that they'll burn you.", "You can be daring without being careless.", "Choices are yours to make today."],
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     
         let alertController = UIAlertController(title: emojis[selectedSign!], message: emojiHoroscope, preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Noted", style: UIAlertActionStyle.default, handler: nil))
         
         present(alertController, animated: true, completion: nil)
     }
