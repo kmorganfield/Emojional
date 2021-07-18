@@ -20,8 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // Create dictionary that assigns each button (emoji) to a zodiac sign
     let emojis = ["🐏": "Aries", "🐮": "Taurus", "👯": "Gemini", "🦀": "Cancer", "🦁": "Leo", "🌬": "Virgo", "⚖️": "Libra", "🦂": "Scorpio", "🏹": "Sagittarius", "🐐": "Capricorn", "🌊": "Aquarius", "🎏": "Pisces"]
     
+    // Create second dictionary that assigns the zodiac sign from above to an array of horoscopes
     var horoscopes = [
     "Aries": ["You don't have to treat difficult feelings like hot coals in your hand that must be thrown off for fear that they'll burn you.", "You can be daring without being careless.", "Choices are yours to make today."],
     
@@ -49,6 +52,7 @@ class ViewController: UIViewController {
     
     ]
     
+    // On click, pop-up alert displays a random horoscope from the array assigned to the zodiac sign/button
     @IBAction func showMessage(sender: UIButton) {
         let selectedSign = sender.titleLabel?.text
         let random:UInt32 = arc4random_uniform(3)
